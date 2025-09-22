@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void print_flag(){
+void win(){
     system("cat flag.txt");
 }
 
@@ -34,7 +34,7 @@ void menu(){
             printf("new: ");
             if(idx == 3){ 
                 printf("Overwriting action pointer with print_flag!\n");
-                action = print_flag;
+                action = win;
                 puts("saved.");
             } else if(idx >=0 && idx < 3){
                 gets(items[idx]);
