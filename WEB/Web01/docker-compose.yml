@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  web01:
+    build: .
+    image: web01-md5uploader:latest
+    container_name: web01
+    environment:
+      - PORT=8000
+      - FLASK_SECRET=dev-secret
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+    restart: unless-stopped
