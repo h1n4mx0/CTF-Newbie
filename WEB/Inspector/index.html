@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSEC Training - An toàn thông tin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="floating-elements">
+      <i class="fas fa-shield-alt floating-icon"></i>
+      <i class="fas fa-bug floating-icon"></i>
+      <i class="fas fa-lock floating-icon"></i>
+      <i class="fas fa-code floating-icon"></i>
+    </div>
+    <div class="hero-content">
+      <h1>MSEC Training </h1>
+      <p class="tagline">Rèn luyện kỹ năng An toàn thông tin qua các mảng thi CTF</p>
+      <a href="#services" class="cta-button">
+        <i class="fas fa-arrow-down"></i> Khám phá các mảng
+      </a>
+    </div>
+  </section>
+
+  <!-- Mảng CTF -->
+  <section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Các mảng trong CTF</h2>
+    <p class="section-subtitle">
+      Mỗi mảng trong CTF tương ứng với một nhánh kiến thức quan trọng của An toàn thông tin.  
+      Đây là nội dung nền tảng giúp bạn luyện tập và phát triển kỹ năng toàn diện.
+    </p>
+
+    <div class="services-grid">
+      <!-- Web Exploitation -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-globe"></i></div>
+        <h3>Web Exploitation</h3>
+        <p>
+          Đây là mảng phổ biến nhất trong CTF. Người chơi cần tìm và khai thác lỗ hổng trong các ứng dụng web:  
+          từ những lỗ hổng cơ bản như <b>SQL Injection, XSS, LFI/RFI, CSRF</b> đến các lỗ hổng logic nghiệp vụ, bypass xác thực, IDOR, hoặc khai thác lỗi cấu hình máy chủ.  <!--Flag part 1: MSEC{h1dd3n_1n_ -->
+          Kỹ năng quan trọng: hiểu mô hình HTTP, cookie/session, request/response, cũng như khả năng phân tích code web (PHP, Python, JavaScript...).  
+          Thành thạo mảng này giúp người chơi áp dụng trực tiếp vào pentest thực tế.
+        </p>
+      </div>
+
+      <!-- Reverse Engineering -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+        <h3>Reverse Engineering</h3>
+        <p>
+          Reverse Engineering (Reversing) yêu cầu phân tích các chương trình được biên dịch để hiểu cách chúng hoạt động.  
+          Người chơi thường phải đọc file <b>.exe, .elf</b> bằng công cụ <b>IDA, Ghidra, radare2</b> hoặc debug bằng <b>gdb/OllyDbg</b>.  
+          Mục tiêu có thể là: tìm mật khẩu hardcode, đảo ngược thuật toán mã hóa, hoặc bypass kiểm tra license.  
+          Kỹ năng cần thiết: kiến thức Assembly, cấu trúc bộ nhớ, cách hoạt động của compiler, và kỹ năng tư duy logic.
+        </p>
+      </div>
+
+      <!-- Binary Exploitation -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-bug"></i></div>
+        <h3>Binary Exploitation (Pwn)</h3>
+        <p>
+          Đây là mảng “khó nhằn” nhất trong CTF. Người chơi sẽ khai thác các chương trình nhị phân bị lỗi bộ nhớ,  
+          phổ biến nhất là <b>Buffer Overflow, Format String Bug, Use-After-Free, Heap Exploit</b>.  
+          Bài thường yêu cầu viết payload điều khiển <b>Instruction Pointer</b> và dựng <b>ROP chain</b> để chiếm quyền thực thi.  
+          Kỹ năng cần: hiểu sâu về hệ điều hành, cơ chế quản lý bộ nhớ, assembly, cùng khả năng dùng công cụ như <b>pwntools</b> để tự động hóa khai thác.
+        </p>
+      </div>
+
+      <!-- Cryptography -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-lock"></i></div>
+        <h3>Cryptography</h3>
+        <p>
+          Mảng này tập trung vào các hệ thống mã hóa và giải mã. Người chơi có thể gặp các dạng:  
+          <b>Classical Cipher</b> (Caesar, Vigenère), <b>Modern Crypto</b> (RSA, AES), hoặc <b>lỗi triển khai</b> (padding oracle, nonce reuse).  
+          Bài crypto thường không yêu cầu brute-force mà khai thác từ điểm yếu toán học hoặc sai sót trong code.  
+          Kỹ năng cần thiết: kiến thức toán rời rạc, số học modulo, đại số tuyến tính, xác suất thống kê, cùng với khả năng lập trình để viết script giải nhanh.
+        </p>
+      </div>
+
+      <!-- Forensics -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>Forensics</h3>
+        <p>
+          Forensics là điều tra số: phân tích file, log, bộ nhớ, hoặc lưu lượng mạng để tìm flag.  
+          Ví dụ: phân tích file ảnh ẩn dữ liệu (stego), trích xuất thông tin từ <b>PCAP</b>, khôi phục dữ liệu trong <b>memory dump</b>, hoặc tìm mật khẩu trong registry Windows.  
+          Người chơi cần biết dùng các công cụ: <b>Wireshark, Volatility, binwalk, strings, exiftool...</b>.  
+          Đây là mảng rất thực tế, gần với công việc điều tra số trong an ninh mạng.
+        </p>
+      </div>
+
+      <!-- Misc / OSINT -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-question"></i></div>
+        <h3>Misc & OSINT</h3>
+        <p>
+          Misc (Miscellaneous) và OSINT (Open Source Intelligence) là mảng tổng hợp.  
+          Nội dung có thể rất đa dạng: steganography, puzzle logic, lập trình nhỏ, khai thác lỗ hổng trong giao thức lạ, hoặc đơn giản là “Google dorking” để tìm thông tin.  
+          OSINT yêu cầu khả năng thu thập và phân tích thông tin từ nguồn mở như mạng xã hội, website, hoặc dữ liệu công khai.  
+          Đây là mảng dễ tiếp cận nhưng đôi khi cũng đánh đố vì sự sáng tạo và độ bất ngờ.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Giới thiệu -->
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="section-title" style="color: white;">Về MSEC Training </h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
+          Nơi tổng hợp kiến thức và kỹ năng ATTT qua các mảng thi CTF. Luyện tập, học hỏi và thử thách bản thân cùng cộng đồng.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Bài tập Web</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">80+</div>
+            <div class="stat-label">Bài tập Pwn</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Bài tập Crypto</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Bài tập tổng hợp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#about">Giới thiệu</a>
+        <a href="#services">Các mảng</a>
+        <a href="#contact">Liên hệ</a>
+        <a href="/privacy">Chính sách</a>
+        <a href="/terms">Điều khoản</a>
+        <a href="/careers">Cộng tác</a>
+      </div>
+      <div class="copyright">
+        <a href="https://web.facebook.com/msec.club">MSEC - CLB ATTT MTA</a> ❤️
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
