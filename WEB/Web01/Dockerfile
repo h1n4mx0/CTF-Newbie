@@ -3,8 +3,8 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PORT=8000 \
-    FLAG=MSEC{test}
-    
+    FLAG=MSEC{Sh3ll_1nj3ct10n_W1th_5ubpr0c3876536373455} 
+
 WORKDIR /app
 
 RUN useradd -m user && \
